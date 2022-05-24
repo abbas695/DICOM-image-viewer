@@ -1,0 +1,357 @@
+body {
+  
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    background: #272727;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+.navMenu {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+    .navMenu a {
+        color: floralwhite;
+        text-decoration: none;
+        font-size: 1.3em;
+        text-transform: uppercase;
+        font-weight: 500;
+        display: inline-block;
+        width: 80px;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+
+        .navMenu a:hover {
+            color: #833030;
+        }
+
+    .navMenu .dot {
+        width: 6px;
+        height: 6px;
+        background: #7e3535;
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-transform: translateX(30px);
+        transform: translateX(30px);
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .navMenu a:nth-child(1):hover ~ .dot {
+        -webkit-transform: translateX(30px);
+        transform: translateX(30px);
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        opacity: 1;
+    }
+
+    .navMenu a:nth-child(1) {
+    }
+
+    .navMenu a:nth-child(2):hover ~ .dot {
+        -webkit-transform: translateX(110px);
+        transform: translateX(110px);
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        opacity: 1;
+    }
+
+    .navMenu a:nth-child(3):hover ~ .dot {
+        -webkit-transform: translateX(200px);
+        transform: translateX(200px);
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        opacity: 1;
+    }
+
+    .navMenu a:nth-child(4):hover ~ .dot {
+        -webkit-transform: translateX(285px);
+        transform: translateX(285px);
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        opacity: 1;
+    }
+
+
+.slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 200px;
+    height: 15px;
+    border-radius: 5px;
+    background: #7c7b7b;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #DB7093;
+        cursor: pointer;
+    }
+
+    .slider:hover {
+        opacity: 1; /* Fully shown on mouse-over */
+    }
+
+
+.content {
+    max-width: 600px;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+p {
+    font-size: 16pt;
+    font-family: 'Oswald', sans-serif;
+    color: #DB7093;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+.flag {
+    -webkit-appearance: none;
+    background-color: rgb(128, 127, 127);
+    border: 1px solid #686969;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    padding: 10px;
+    border-radius: 20px;
+    display: inline-block;
+    position: relative;
+}
+    .flag:active, .regular-checkbox:checked:active {
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .flag:checked {
+        background-color: rgb(112, 111, 111);
+        border: 1px solid #adb8c0;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+        color: #99a1a7;
+    }
+        .flag:checked:after {
+            content: '\2714';
+            font-size: 14px;
+            position: absolute;
+            top: 0px;
+            left: 3px;
+            color: #99a1a7;
+        }
+
+.center {
+    text-align:center;
+    border-radius: 25px;
+    display: flex;
+    background-color: floralwhite;
+    position: fixed;
+    left: 10px;
+    bottom: 0px;
+    width: 14%;
+}
+
+
+
+
+
+
+.menu-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+    .menu-wrap .toggler {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .menu-wrap .hamburger {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 60px;
+        width: 60px;
+        background: transparent;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+
+        
+        .menu-wrap .hamburger > div {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background:#833030;
+            flex: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.4s;
+        }
+
+            
+            .menu-wrap .hamburger > div:before,
+            .menu-wrap .hamburger > div:after {
+                content: "";
+                position: absolute;
+                top: 10px;
+                left: 0;
+                background: inherit;
+                height: 2px;
+                width: 100%;
+                z-index: 1;
+            }
+
+            .menu-wrap .hamburger > div:after {
+                top: 20px;
+            }
+
+    
+    .menu-wrap .toggler:checked + .hamburger > div {
+        transform: rotate(135deg);
+    }
+.menu-wrap .toggler:checked + .hamburger > div:before,
+        .menu-wrap .toggler:checked + .hamburger > div:after {
+            top: 0;
+            transform: rotate(90deg);
+        }
+
+    
+    .menu-wrap .toggler:checked:hover + .hamburger > div {
+        transform: rotate(225deg);
+    }
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:floralwhite;
+    height: 70vh;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: all var(--menu-speed) ease;
+}
+
+    .menu > div {
+        color:black;
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 30%;
+        flex: none;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.4s ease-in;
+    }
+
+    .menu ul {
+
+        list-style: none;
+    }
+
+    .menu li {
+        padding: 1rem 0;
+    }
+
+    .menu > div a {
+        text-decoration: none;
+        color: #833030;
+        font-size: 1.5rem;
+        opacity: 0;
+        transition: opacity 1s ease-in;
+    }
+
+    .menu a:hover {
+        color: black;
+        transition: color 0.3s ease-in;
+    }
+
+.menu-wrap .toggler:checked ~ .menu {
+    opacity: 1;
+    width: 26vw;
+    transition: all var(--menu-speed) ease;
+}
+
+    .menu-wrap .toggler:checked ~ .menu > div {
+        opacity: 1;
+        transition: opacity 0.4s ease-in;
+    }
+
+        .menu-wrap .toggler:checked ~ .menu > div a {
+            opacity: 1;
+            transition: opacity 1s ease-in;
+        }
+
+@media (max-width: 500px) {
+
+
+    .menu-wrap .toggler:checked ~ .menu {
+        width: 65vw;
+    }
+}
